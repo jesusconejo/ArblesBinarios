@@ -21,8 +21,8 @@ public class Main {
         arbolBinario.insertar(9,"i");
         arbolBinario.insertar(7,"j");
 
-       // System.out.println("\nSe recorre en orden de Mayor a Menor");
-       // arbolBinario.viewMaxtoMin(arbolBinario.raiz); // Se recorre desde la Raiz
+        System.out.println("\nSe recorre el Arbol Binario alamcenado en orden de Mayor a Menor");
+        arbolBinario.viewMaxtoMin(arbolBinario.raiz); // Se recorre desde la Raiz
 
         //Se extraen las palabras del archivo
         try {
@@ -39,7 +39,9 @@ public class Main {
             arbolFrase.insertar((Integer) datos.get(key),key);
             //System.out.println("Clave: " + key + " -> Valor: " + datos.get(key));
         }
+        //Palabras odenadas por frecuencia de aparicion
         arbolFrase.viewMaxtoMin(arbolFrase.raiz);
+
     }
 
 
@@ -52,7 +54,7 @@ public class Main {
                 if(palabras[i].equals(palabras[j])){
                     contador++;
                 }
-                //contador = 0;
+
             }
             keyAndWord.put(palabras[i],contador);
             contador = 0;
